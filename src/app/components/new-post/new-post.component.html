@@ -12,6 +12,7 @@
             <textarea 
                 [(ngModel)]="tweetMessage" 
                 (input)="changeTweet()"
+                (keyup.enter)="sendTweet()"
                 [maxlength]="tweetMaxLength"
                 class="
                 mb-2 
