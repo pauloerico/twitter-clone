@@ -5,11 +5,19 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './new-post.component.html',
   styleUrls: ['./new-post.component.css']
 })
-export class NewPostComponent implements OnInit {
+export class NewPostComponent {
 
-  constructor() { }
 
-  ngOnInit(): void {
+  tweetMessage: string = ""
+  tweetMaxLength: number = 240
+  tweetRemain: number = this.tweetMaxLength
+
+  sendTweet(){
+    alert("Tweet enviado!")
+  }
+  
+  changeTweet(){
+    this.tweetRemain = this.tweetMaxLength - this.tweetMessage.length
   }
 
 }
